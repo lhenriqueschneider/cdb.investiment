@@ -7,12 +7,16 @@ using Swashbuckle.Application;
 
 namespace Cdb.Investment.Api
 {
-    public class SwaggerConfig
+    /// <summary>
+    /// Provides configuration for Swagger in the API.
+    /// </summary>
+    public static class SwaggerConfig
     {
+        /// <summary>
+        /// Registers Swagger configuration.
+        /// </summary>
         public static void Register()
         {
-            var thisAssembly = typeof(SwaggerConfig).Assembly;
-
             GlobalConfiguration.Configuration
                 .EnableSwagger(c =>
                     {
@@ -20,7 +24,7 @@ namespace Cdb.Investment.Api
                     })
                 .EnableSwaggerUi(c =>
                     {
-                        
+
                     });
         }
     }

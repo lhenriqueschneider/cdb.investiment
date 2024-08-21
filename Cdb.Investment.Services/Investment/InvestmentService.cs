@@ -24,6 +24,17 @@ namespace Cdb.Investment.Services.Investment
         /// <returns>The final value of the investment.</returns>
         public async Task<CalculateCdbResponse> Calculate(decimal monetaryValue, int mounths)
         {
+
+            if (monetaryValue <= 0)
+            {
+                throw new ArgumentException("O valor monetário tem que ser maior do que zero");
+            }
+
+            if (mounths <= 0)
+            {
+                throw new ArgumentException("Necessário informar um prazo maior ou igual a 1");
+            }
+
             decimal totalAmount = monetaryValue;
 
             // Calculates the total amount based on the number of months
