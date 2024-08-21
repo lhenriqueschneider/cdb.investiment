@@ -1,0 +1,30 @@
+<div class="toolbar" role="banner">
+  <span>Cálculo de investimentos CDB</span>
+  <div class="spacer"></div>
+</div>
+<form [formGroup]="checkoutForm">
+
+  <div class="content" role="main">
+    <h2>Simular</h2>
+
+    <div class="form-group">
+      <label for="monetaryValue">Valor Monetário:</label>
+      <input type="text" class="form-control" id="monetaryValue"
+             name="monetaryValue" formControlName="monetaryValue">
+    </div>
+
+    <div class="form-group">
+      <label for="mounth">Prazo em meses:</label>
+      <input type="number" class="form-control" id="mounth" name="mounth" formControlName="mounth" min="0" maxlength="3">
+    </div>
+
+    <button class="btn btn-primary btn-md" type="button" style="margin-left: 10px;" (click)="calculateInvestment()">Calcular investimento</button>
+  </div>
+  </form>
+
+
+<div *ngIf="cdbInvestimentResponse != null && cdbInvestimentResponse.TotalAmount > 0 && cdbInvestimentResponse.NetAmount > 0">
+  <h3>Valor bruto: R$ {{cdbInvestimentResponse.TotalAmount}}</h3>
+  <h3>Valor líquido: R$ {{cdbInvestimentResponse.NetAmount}}</h3>
+
+</div>
