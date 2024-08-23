@@ -35,11 +35,12 @@ Execução do projeto em Angular:
 3.	Executar o Servidor de Desenvolvimento
 •	Execute o seguinte comando para iniciar o servidor de desenvolvimento:  
      ng serve
-•	O servidor de desenvolvimento estará disponível em http://localhost:4200/ por padrão.
+•	O servidor de desenvolvimento estará disponível em http://localhost:4200/ (ou https://127.0.0.1:4200) por padrão.
 
 Testando o Projeto
 1.	Acessar a Aplicação
 •	Abra um navegador web e navegue até http://localhost:4200/ para ver a aplicação em execução.
+ 1. Caso seja necessário, executar o projeto pela acessar a url https://127.0.0.1:4200
 
 2.	Executar Testes Unitários
 •	Para executar os testes unitários usando Karma, execute o comando:
