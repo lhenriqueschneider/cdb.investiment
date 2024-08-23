@@ -35,7 +35,7 @@ Execução do projeto em Angular:
 3.	Executar o Servidor de Desenvolvimento
 •	Execute o seguinte comando para iniciar o servidor de desenvolvimento:  
      ng serve
-•	O servidor de desenvolvimento estará disponível em http://localhost:4200/ por padrão.
+•	O servidor de desenvolvimento estará disponível em http://127.0.0.1:4200/ por padrão.
 
 Testando o Projeto
 1.	Acessar a Aplicação
